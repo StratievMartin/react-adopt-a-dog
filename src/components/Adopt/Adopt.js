@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import style from './Adopt.module.css'
-
+import DogAvatar from './DogAvatar';
+import DogDesc from './DogDesc';
 
 const Adopt = () => {
     const [error, setError] = useState(null);
@@ -35,12 +36,11 @@ const Adopt = () => {
                                 <li
                                     className={style.dog}
                                     key={el.id}>
-                                    <img src={el.img} alt="" />
-                                    <div><b>{el.breed}</b></div>
-                                    <div>{el.temperament[0]}</div>
-                                    <button
-                                        onClick={(e)=>console.log(el.id)}
-                                        className={style.adoptBtn}>Adopt</button>
+                                    <DogAvatar props={el} ></DogAvatar>
+                                    <DogDesc props={el} />
+                                    <button className={style.adoptBtn}
+                                    onClick={(e) => console.log(el.id)}
+                                    >Adopt</button>
                                 </li>
                             )
                         })}
