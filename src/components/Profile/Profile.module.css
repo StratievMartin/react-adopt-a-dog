@@ -1,0 +1,21 @@
+.myPets {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.header {
+  text-align: center;
+}
+
+.adoptContainer {
+  text-align: center;
+  align-items: center;
+  background-color: rgb(85, 124, 250);
+}
+/* ul {
+  display: flex;
+
+  list-style: none;
+}
+li {
+  width: 200px;
+} */

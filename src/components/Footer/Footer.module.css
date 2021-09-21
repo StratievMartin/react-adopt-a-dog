@@ -1,0 +1,11 @@
+.footer {
+  background-color: #353b45;
+  color: beige;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer h5 {
+  margin: 0 20px 0 0;
+}

@@ -1,0 +1,32 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #353b45;
+}
+.navLinks{
+  text-decoration: none;
+  color: beige;
+}
+
+.navLogo {
+  margin-left: 20px;
+}
+/* .navItems {
+} */
+.navItems ul {
+  list-style: none;
+  display: flex;
+}
+.navItems ul li {
+  margin-right: 20px;
+  text-decoration: none;
+}
+.adopt {
+  color: rgb(99, 192, 6);
+  text-decoration: none;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
