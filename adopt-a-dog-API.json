@@ -1,0 +1,126 @@
+{
+  "dogBreeds": [
+    {
+      "breed": "Labrador Retriever",
+      "location": "Canada,USA",
+      "temperament": [
+        "Cheerful",
+        "Gentle",
+        "Friendly",
+        "Intelligent"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "German Shepard",
+      "location": "Germany",
+      "temperament": [
+        "Corageous",
+        "Intelligent",
+        "Loyal",
+        "Watchful"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "Golden Retriever",
+      "location": "United Kingdom",
+      "temperament": [
+        "Intelligent",
+        "Kind",
+        "Friendly",
+        "Confident"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "French Bulldog",
+      "location": "France, UK",
+      "temperament": [
+        "Playful",
+        "Sociable",
+        "Friendly",
+        "Lively",
+        "Patient"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "Bulldog",
+      "location": "United Kingdom",
+      "temperament": [
+        "Friendly",
+        "Docile",
+        "Willful",
+        "Gregarious"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "Beagle",
+      "location": "United Kingdom",
+      "temperament": [
+        "Gentle",
+        "Intelligent",
+        "Even Tempered",
+        "Determined"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "Poodle",
+      "location": "Germany, France",
+      "temperament": [
+        "Intelligent",
+        "Faithful",
+        "Trainable",
+        "Instinctual"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "Rottweiler",
+      "location": "Germany",
+      "temperament": [
+        "Intelligent",
+        "Corageous",
+        "Fearless",
+        "Confident"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "German Shorthaired Pointer",
+      "location": "Germany",
+      "temperament": [
+        "Intelligent",
+        "Trainable",
+        "Boisterous",
+        "Cooperative"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "Yorkshire Terrier",
+      "location": "United Kingdom",
+      "temperament": [
+        "Independent",
+        "Intelligent",
+        "Corageous",
+        "Confident"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "breed": "Boxer",
+      "location": "Germany",
+      "temperament": [
+        "Playful",
+        "Friendly",
+        "Devoted",
+        "Loyal"
+      ],
+      "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    }
+  ]
+}
