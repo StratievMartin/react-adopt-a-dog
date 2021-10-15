@@ -34,7 +34,7 @@ const Adopt = () => {
                         {dogData.map(el => {
                             return (
                                 <li
-                                    className={style.dog}
+                                    className={style.dogCard}
                                     key={el.id}>
                                     <DogAvatar props={el} ></DogAvatar>
                                     <DogDesc props={el} />

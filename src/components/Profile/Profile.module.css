@@ -4,6 +4,7 @@
 }
 .header {
   text-align: center;
+  color: darkslategrey;
 }
 
 .adoptContainer {
@@ -11,11 +12,3 @@
   align-items: center;
   background-color: rgb(85, 124, 250);
 }
-/* ul {
-  display: flex;
-
-  list-style: none;
-}
-li {
-  width: 200px;
-} */

@@ -1,14 +1,13 @@
-.navigation {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #353b45;
+  background-color: #11332ea4;
 }
 .navLinks{
   text-decoration: none;
   color: beige;
 }
-
 .navLogo {
   margin-left: 20px;
 }
@@ -23,7 +22,7 @@
   text-decoration: none;
 }
 .adopt {
-  color: rgb(99, 192, 6);
+  color: rgb(191, 255, 107);
   text-decoration: none;
 }
 .footer {

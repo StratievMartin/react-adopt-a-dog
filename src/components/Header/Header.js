@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 // import Adopt from '../Adopt/Adopt';
 const Header = () => {
     return (
-        <nav className={style.navigation}>
+        <nav className={style.nav}>
             <div className={style.navLogo}>
                 <h1>
                     <NavLink
