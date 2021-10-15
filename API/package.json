@@ -1,0 +1,11 @@
+{
+  "name": "dog-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch dogs-api.json --port 5000"
+  },
+  "author": "",
+  "license": "ISC"
+}

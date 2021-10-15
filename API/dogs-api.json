@@ -1,6 +1,7 @@
 {
   "dogBreeds": [
-    {
+    { 
+      "id": 1,
       "breed": "Labrador Retriever",
       "location": "Canada,USA",
       "temperament": [
@@ -12,6 +13,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 2,
       "breed": "German Shepard",
       "location": "Germany",
       "temperament": [
@@ -23,6 +25,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 3,
       "breed": "Golden Retriever",
       "location": "United Kingdom",
       "temperament": [
@@ -34,6 +37,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 4,
       "breed": "French Bulldog",
       "location": "France, UK",
       "temperament": [
@@ -46,6 +50,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 5,
       "breed": "Bulldog",
       "location": "United Kingdom",
       "temperament": [
@@ -57,6 +62,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 6,
       "breed": "Beagle",
       "location": "United Kingdom",
       "temperament": [
@@ -68,6 +74,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 7,
       "breed": "Poodle",
       "location": "Germany, France",
       "temperament": [
@@ -79,6 +86,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 8,
       "breed": "Rottweiler",
       "location": "Germany",
       "temperament": [
@@ -90,6 +98,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 9,
       "breed": "German Shorthaired Pointer",
       "location": "Germany",
       "temperament": [
@@ -101,6 +110,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 10,
       "breed": "Yorkshire Terrier",
       "location": "United Kingdom",
       "temperament": [
@@ -112,6 +122,7 @@
       "img": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
     },
     {
+      "id": 11,
       "breed": "Boxer",
       "location": "Germany",
       "temperament": [
