@@ -1,0 +1,22 @@
+form{
+  max-width: 1200px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.authHeading{
+  font-weight: normal;
+}
+.formActionBtn{
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.formActionBtn:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+input[type="password"]{
+  margin: 10px;
+}

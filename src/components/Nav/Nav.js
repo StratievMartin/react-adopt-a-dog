@@ -1,9 +1,9 @@
-import style from './Header.module.css'
+import style from './Nav.module.css'
 import { NavLink } from 'react-router-dom';
 // import Home from '../Home/Home';
 // import Profile from '../Profile/Profile';
 // import Adopt from '../Adopt/Adopt';
-const Header = () => {
+const Nav = () => {
     return (
         <nav className={style.nav}>
             <div className={style.navLogo}>
@@ -44,9 +44,16 @@ const Header = () => {
                             Register
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink
+                            className={style.navLinks}
+                            to="/register">
+                            Logout
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
         </nav>
     )
 }
-export default Header;
+export default Nav;

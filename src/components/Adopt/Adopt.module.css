@@ -8,11 +8,6 @@
 }
 .adoptContainer {
   align-items: center;
-  /* background: linear-gradient(
-    150deg,
-    rgba(100, 182, 34, 1) 0%,
-    rgba(69, 114, 52, 1) 86%
-  ); */
 }
 .dogs {
   list-style: none;

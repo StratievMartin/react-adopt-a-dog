@@ -1,20 +1,25 @@
-import { Route, Switch } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home'
-import Profile from './components/Profile/Profile';
-import Adopt from './components/Adopt/Adopt'
-import Footer from "./components/Footer/Footer"
-import './App.css';
+import { Route, Switch } from "react-router-dom";
+import Nav from "./components/Nav/Nav";
+import Home from "./components/Home/Home";
+import Profile from "./components/Profile/Profile";
+import Adopt from "./components/Adopt/Adopt";
+import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Nav />
 
       <Switch>
         <Route path="/" exact component={Home}></Route>
         <Route path="/profile" component={Profile}></Route>
         <Route path="/adopt" component={Adopt}></Route>
+        <Route path="/login" component={Login}/>
+        <Route path="/register" component={Register}/>
+        <Route path="*" component={()=>"404 NOT FOUND"}></Route>
         <Home />
         {/* <MyPets /> */}
         <Adopt />

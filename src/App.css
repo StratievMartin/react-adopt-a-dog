@@ -1,4 +1,10 @@
 body{
   background: rgb(95,167,57);
   background: linear-gradient(159deg, rgba(95,167,57,1) 0%, rgba(168,218,48,1) 42%, rgba(149,193,42,1) 100%);
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+  /* box-sizing: border-box; */
+}
+ul{
+  list-style: none;
 }
