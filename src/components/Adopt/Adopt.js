@@ -8,6 +8,7 @@ const Adopt = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [dogData, setDogData] = useState([]);
 
+    //service
     useEffect(() => {
         fetch('http://localhost:5000/dogBreeds')
             .then(res => res.json())
@@ -24,8 +25,9 @@ const Adopt = () => {
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-        return <div>Loading...</div>;
+        return <div style={{textAlign:"center"}}>Loading...</div>;
     } else {
+        //dog card 
         return (
             <div className={style.adopt}>
                 <h2 className={style.header}>Available for adoption</h2>

@@ -1,22 +1,36 @@
-form{
+.authForm {
   max-width: 1200px;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.authHeading{
-  font-weight: normal;
+.authForm > div {
+  padding: 20px;
+  border: 1px solid greenyellow;
+  border-radius: 15px;
+  text-align: center;
 }
-.formActionBtn{
+.authHeading {
+  color: darkslategrey;
+}
+.formActionBtn {
   padding: 5px 15px;
   border-radius: 10px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.623);
+  margin-top: 5px;
 }
-.formActionBtn:hover{
+.formActionBtn:hover {
   opacity: 0.8;
   cursor: pointer;
 }
-input[type="password"]{
+input{
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+}
+input[type="password"] {
   margin: 10px;
 }

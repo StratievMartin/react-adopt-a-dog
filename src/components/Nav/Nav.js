@@ -47,7 +47,7 @@ const Nav = () => {
                     <li>
                         <NavLink
                             className={style.navLinks}
-                            to="/register">
+                            to="/">
                             Logout
                         </NavLink>
                     </li>
