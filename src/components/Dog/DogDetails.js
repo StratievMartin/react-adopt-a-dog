@@ -1,15 +1,16 @@
+import { useParams } from "react-router"
 import { useState, useEffect } from "react";
-import style from "./Adopt.module.css";
-import Dogs from "../Dog/Dogs"
 
-const Adopt = () => {
+const DogDetails = () =>{
+  const {id} = useParams();
+  
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [dogData, setDogData] = useState([]);
   
   //service
   useEffect(() => {
-    fetch("http://localhost:5000/dogBreeds")
+    fetch(`http://localhost:5000/dogBreeds/${id}`)
       .then((res) => {
         if (!res.ok) {
           throw Error("could not fetch the data");
@@ -33,20 +34,15 @@ const Adopt = () => {
     return <div style={{ textAlign: "center" }}>Loading...</div>;
   } else {
     return (
-      <div className={style.adopt}>
-        <h2 className={style.header}>Available for adoption</h2>
-        <div className={style.adoptContainer}>
-          <Dogs dogData={dogData} setDogData={setDogData}></Dogs>
-          <hr />
-          <h2>Dogs in Germany</h2>
-          <Dogs
-            dogData={dogData.filter(
-              (dogData) => dogData.location === "Germany"
-            )}
-          ></Dogs>
-        </div>
+      <div>
+        <h1>{dogData.breed}</h1>
+        <h1>{dogData.location}</h1>
+        <h1>{dogData.temperament}</h1>
+        <img src={dogData.img} alt="img" />
       </div>
-    );
-  }
-};
-export default Adopt;
+    )}
+  // return (
+  //   <div>Dog details - {id}</div>
+  // )
+}
+export default DogDetails

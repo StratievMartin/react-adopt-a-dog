@@ -1,4 +1,3 @@
-
 const DogAvatar = (dogInfo) => {
     return (
         <div>
