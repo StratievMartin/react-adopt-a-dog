@@ -37,13 +37,13 @@ const Adopt = () => {
         <h2 className={style.header}>Available for adoption</h2>
         <div className={style.adoptContainer}>
           <Dogs dogData={dogData} setDogData={setDogData}></Dogs>
-          <hr />
+          {/* <hr /> 
           <h2>Dogs in Germany</h2>
           <Dogs
             dogData={dogData.filter(
               (dogData) => dogData.location === "Germany"
             )}
-          ></Dogs>
+          ></Dogs> */}
         </div>
       </div>
     );

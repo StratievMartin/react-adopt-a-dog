@@ -1,5 +1,7 @@
 import { useParams } from "react-router"
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Dogs from "./Dogs";
 
 const DogDetails = () =>{
   const {id} = useParams();
@@ -39,6 +41,7 @@ const DogDetails = () =>{
         <h1>{dogData.location}</h1>
         <h1>{dogData.temperament}</h1>
         <img src={dogData.img} alt="img" />
+        <Link to={'/adopt'}>Go Back</Link>
       </div>
     )}
   // return (
