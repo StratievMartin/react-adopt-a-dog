@@ -1,0 +1,12 @@
+.adopt {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.header {
+  color: darkslategrey;
+  text-align: center;
+}
+.adoptContainer {
+  align-items: center;
+}
+

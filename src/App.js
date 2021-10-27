@@ -1,19 +1,18 @@
 import { Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
-import Home from "./components/Home/Home";
-import Profile from "./components/Profile/Profile";
-import Adopt from "./components/Adopt/Adopt";
-import DogDetails from "./components/Dog/DogDetails";
-import Login from "./components/Auth/Login";
-import Register from "./components/Auth/Register";
 import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home"
+import Profile from "./pages/Profile/Profile";
+import Adopt from "./pages/Adopt/Adopt";
+import DogDetails from "./pages/DogDetails/DogDetails";
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Nav />
-
       <Switch>
         <Route path="/" exact component={Home}></Route>
         <Route path="/profile" component={Profile}></Route>
@@ -23,7 +22,7 @@ function App() {
         <Route path="/register" component={Register}/>
         <Route path="*" component={()=>"404 NOT FOUND"}></Route>
         <Home />
-        {/* <MyPets /> */}
+        {/* <Profile /> */}
         <Adopt />
       </Switch>
       <Footer />
