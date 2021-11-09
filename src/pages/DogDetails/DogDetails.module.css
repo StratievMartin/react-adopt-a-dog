@@ -1,0 +1,27 @@
+.dogDataContainer{
+  display: flex;
+  justify-content: space-around;
+}
+.dogDataContainer > img {
+  max-width: 600px;
+  border-radius: 3px;
+}
+.backButtonContainer{
+  display: flex;
+  justify-content: flex-end;
+}
+.dogInfo{
+  max-width: 400px;
+}
+.backButton{
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  margin-right: 50px;
+}
+.backButton > span{
+  border: 1px solid greenyellow;
+}
+.backButton:hover{
+  color: grey;
+}

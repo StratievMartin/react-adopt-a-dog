@@ -14,8 +14,8 @@ const Dogs = () => {
         {dogData &&
           dogData.map((el) => {
             return (
-              <div>
-                <li className={style.dogCard} key={el.id}>
+              <div key={el.id}>
+                <li className={style.dogCard}>
                   <DogAvatar props={el}></DogAvatar>
                   <DogDesc props={el} />
                   <button

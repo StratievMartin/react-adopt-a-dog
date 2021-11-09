@@ -24,7 +24,7 @@
   color: black;
 }
 .readMore:hover{
-  font-weight: bold;
+  color: grey;
 }
 .adoptBtn {
   margin: 10px 0;

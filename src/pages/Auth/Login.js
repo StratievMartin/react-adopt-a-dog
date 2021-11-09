@@ -6,8 +6,9 @@ const Login = () => {
 
   const loginHandler = (e) => {
     e.preventDefault();
+    const logData = {username,password}
     console.log("login");
-    console.log(username, password);
+    console.log(logData);
   };
   return (
     <form className={style.authForm}>

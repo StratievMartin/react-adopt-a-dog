@@ -9,8 +9,10 @@ const useService = (url) => {
     const newDogs = data.filter((el) => el.id !== id);
     setData(newDogs);
   };
+
   useEffect(() => {
-    fetch(url)
+    const abortCont = new AbortController();
+    fetch(url, { signal: abortCont.signal })
       .then((res) => {
         return res.json();
       })
@@ -21,17 +23,22 @@ const useService = (url) => {
           setError(null);
         },
         (error) => {
-          setIsLoaded(true);
-          setError(error);
+          if (error.name === "AbortError") {
+            console.log("fetch aborted");
+          } else {
+            setIsLoaded(true);
+            setError(error);
+          }
         }
       );
+    return () => abortCont.abort();
   }, [url]);
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
     return <div style={{ textAlign: "center" }}>Loading...</div>;
   } else {
-    return { data,handleAdopt };
+    return { data, handleAdopt };
   }
 };
 export default useService;
