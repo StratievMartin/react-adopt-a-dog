@@ -10,8 +10,7 @@ const Login = () => {
   const loginHandler = (e) => {
     e.preventDefault();
     const logData = { username, password };
-    // console.log("login");
-    // console.log(logData);
+    
     setIsPending(true);
     fetch("http://localhost:3000/login", {
       method: "POST",

@@ -1,27 +1,40 @@
 import { useState } from "react";
 import style from "./Form.module.css";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from '../../utils/firebase'
 const Register = () => {
-  const [username, setUsername] = useState([]);
+  const [email, setEmail] = useState([]);
   const [password, setPassword] = useState([]);
 
-  const registerHandler = (e) => {
-    e.preventDefault();
-    console.log("Register");
-    console.log(username, password);
+  const register = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(auth,email,password);
+      console.log(user);
+    } catch (error) {
+      console.log(error);
+    }
   };
+  // const login = async () => {};
+  // const logout = async () => {};
+
+  // const registerHandler = (e) => {
+  //   e.preventDefault();
+  //   console.log("Register");
+  //   console.log(email, password);
+  // };
   return (
     <form className={style.authForm}>
       <div>
         <h2 className={style.authHeading}>Register</h2>
         <div className="field">
-          <label htmlFor="username">Username </label>
+          <label htmlFor="email">Email </label>
           <input
             type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            name="email"
+            id="email"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
         </div>
         <div className="field">
@@ -35,7 +48,7 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
-        <button onClick={registerHandler} className={style.formActionBtn}>
+        <button onClick={register} className={style.formActionBtn}>
           Register
         </button>
       </div>
