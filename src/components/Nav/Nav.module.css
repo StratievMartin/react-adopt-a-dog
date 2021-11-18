@@ -15,16 +15,16 @@
 .navLogo {
   margin-left: 20px;
 }
-/* .navItems {
-} */
 .navItems ul {
   list-style: none;
   display: flex;
+  justify-content: center;
+
 }
-.navItems ul li {
+/* .navItems ul li {
   margin-right: 20px;
   text-decoration: none;
-}
+} */
 .adopt {
   color: rgb(191, 255, 107);
   text-decoration: none;
@@ -33,3 +33,14 @@
   display: flex;
   justify-content: flex-end;
 }
+.logOutBtn {
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.logOutBtn:hover {
+  cursor: pointer;
+  border: 2px solid white;
+}
+

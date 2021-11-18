@@ -10,6 +10,8 @@ const Adopt = () => {
       {/* <select name="" id="">
         <option value="All"></option>
         <option value="Germany"></option>
+        <option value="Canada"></option>
+        <option value="United Kingdom"></option>
       </select> */}
       <div className={style.adoptContainer}>
         {dogData && <Dogs dogData={dogData}></Dogs>}

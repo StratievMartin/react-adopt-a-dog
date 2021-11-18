@@ -7,15 +7,24 @@ import Adopt from "./pages/Adopt/Adopt";
 import DogDetails from "./pages/DogDetails/DogDetails";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
+import { useState } from "react";
+import { auth } from "./utils/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import "./utils/firebase"
 import "./App.css";
 
 function App() {
+  const [user, setUser] = useState({});
+  onAuthStateChanged(auth, (user) => {
+    setUser(user);
+    console.log();
+  });
   return (
     <div className="App">
-      <Nav />
+      <Nav props={user} />
       <Switch>
         <Route path="/" exact component={Home}></Route>
-        <Route path="/profile" component={Profile}></Route>
+        <Route props={user} path="/profile" component={Profile}></Route>
         <Route path="/adopt" exact component={Adopt}></Route>
         <Route path="/adopt/:id"  component={DogDetails}></Route>
         <Route path="/login" component={Login}/>

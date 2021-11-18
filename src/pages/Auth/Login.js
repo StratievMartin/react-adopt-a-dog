@@ -1,40 +1,45 @@
 import { useState } from "react";
-import { useHistory } from "react-router";
 import style from "./Form.module.css";
-const Login = () => {
-  const [username, setUsername] = useState([]);
-  const [password, setPassword] = useState([]);
-  const [isPending, setIsPending] = useState(false);
-  const history = useHistory();
+import { signInWithEmailAndPassword, 
+  // onAuthStateChanged 
+} from "firebase/auth";
+import { auth } from "../../utils/firebase";
+import { Link, useHistory } from "react-router-dom";
 
-  const loginHandler = (e) => {
-    e.preventDefault();
-    const logData = { username, password };
-    
-    setIsPending(true);
-    fetch("http://localhost:3000/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(logData),
-    }).then(() => {
-      console.log("just logged");
-      setIsPending(false)
-      history.push("/");
-    });
+const Login = () => {
+  const [email, setEmail] = useState([]);
+  const [password, setPassword] = useState([]);
+  // const [user, setUser] = useState({});
+
+  const history = useHistory();
+  // onAuthStateChanged(auth, (user) => {
+  //   setUser(user);
+  // });
+
+  const login = async (e) => {
+    try {
+      e.preventDefault();
+      const user = await signInWithEmailAndPassword(auth, email, password);
+      console.log(user);
+      history.push("/adopt");
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   return (
     <form className={style.authForm}>
       <div>
         <h2 className={style.authHeading}>Login</h2>
-        <div className={style.field}>
-          <label htmlFor="username">Username </label>
+        <div className="field">
+          <label htmlFor="email">Email </label>
           <input
             type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            name="email"
+            id="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
         </div>
         <div className="field">
@@ -48,16 +53,12 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
-        {!isPending && (
-          <button onClick={loginHandler} className={style.formActionBtn}>
-            Login
-          </button>
-        )}
-        {isPending && (
-          <button disabled className={style.formActionBtn}>
-            Loading...
-          </button>
-        )}
+        <button onClick={login} className={style.formActionBtn}>
+          Login
+        </button>
+        <p>
+          Need an account? <Link to="/register">Register here.</Link>
+        </p>
       </div>
     </form>
   );

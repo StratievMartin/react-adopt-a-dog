@@ -1,27 +1,32 @@
 import { useState } from "react";
 import style from "./Form.module.css";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import {auth} from '../../utils/firebase'
+import {
+  createUserWithEmailAndPassword,
+  // onAuthStateChanged,
+} from "firebase/auth";
+import { auth } from "../../utils/firebase";
+import { Link,useHistory } from "react-router-dom";
+
 const Register = () => {
   const [email, setEmail] = useState([]);
   const [password, setPassword] = useState([]);
+  // const [user, setUser] = useState({});
 
-  const register = async () => {
+  const history = useHistory();
+  // onAuthStateChanged(auth, (currentUser) => {
+  //   setUser(currentUser);
+  // });
+
+  const register = async (e) => {
     try {
-      const user = await createUserWithEmailAndPassword(auth,email,password);
+      e.preventDefault();
+      const user = await createUserWithEmailAndPassword(auth, email, password);
       console.log(user);
+      history.push('/adopt');
     } catch (error) {
       console.log(error);
     }
-  };
-  // const login = async () => {};
-  // const logout = async () => {};
-
-  // const registerHandler = (e) => {
-  //   e.preventDefault();
-  //   console.log("Register");
-  //   console.log(email, password);
-  // };
+  }
   return (
     <form className={style.authForm}>
       <div>
@@ -32,7 +37,7 @@ const Register = () => {
             type="text"
             name="email"
             id="email"
-            placeholder="email"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></input>
@@ -51,6 +56,7 @@ const Register = () => {
         <button onClick={register} className={style.formActionBtn}>
           Register
         </button>
+        <p>Already have an account? <Link to="/login">Login here.</Link></p>
       </div>
     </form>
   );
