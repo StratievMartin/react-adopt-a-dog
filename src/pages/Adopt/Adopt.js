@@ -1,30 +1,40 @@
 import style from "./Adopt.module.css";
 import Dogs from "../../components/DogCard/Dogs";
 import useService from "../../services/service";
+import { useState } from "react";
 
 const Adopt = () => {
   const { data: dogData } = useService("http://localhost:5000/dogBreeds");
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className={style.adopt}>
       <h2 className={style.header}>Available for adoption</h2>
-      {/* <select name="" id="">
-        <option value="All"></option>
-        <option value="Germany"></option>
-        <option value="Canada"></option>
-        <option value="United Kingdom"></option>
-      </select> */}
-      <div className={style.adoptContainer}>
-        {dogData && <Dogs dogData={dogData}></Dogs>}
-        {/* <hr /> 
-          <h2>Dogs in Germany</h2>
-          <Dogs
-            dogData={dogData.filter(
-              (dogData) => dogData.location === "Germany"
-            )}
-          ></Dogs> */}
-      </div>
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={(e) => {
+          setSearchTerm(e.target.value);
+        }}
+      />
+      {dogData &&
+        dogData
+          .filter((value) => {
+            if (searchTerm === "") {
+              return value;
+            } else if (
+              value.breed.toLowerCase().includes(searchTerm.toLowerCase())
+            ) {
+              return value;
+            }
+          })
+          .map((dogs) => {
+            return (
+              <div className={style.adoptContainer} key={dogs.id}>
+                <Dogs dogData={dogData}></Dogs>
+              </div>
+            );
+          })}
     </div>
   );
 };
-// };
 export default Adopt;

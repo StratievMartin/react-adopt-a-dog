@@ -19,12 +19,10 @@
   list-style: none;
   display: flex;
   justify-content: center;
-
 }
-/* .navItems ul li {
-  margin-right: 20px;
-  text-decoration: none;
-} */
+.navItems ul li {
+  margin-right: 10px;
+}
 .adopt {
   color: rgb(191, 255, 107);
   text-decoration: none;
@@ -38,6 +36,7 @@
   border: 2px solid black;
   border-radius: 5px;
   padding: 5px 10px;
+  margin-left: 20px;
 }
 .logOutBtn:hover {
   cursor: pointer;

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import style from "./Profile.module.css";
 const Profile = (user) => {
+  console.log(user);
   return (
     <div>
       {user.props ? (
