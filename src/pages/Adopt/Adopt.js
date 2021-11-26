@@ -20,17 +20,19 @@ const Adopt = () => {
         dogData
           .filter((value) => {
             if (searchTerm === "") {
+              console.log('log'+value);
               return value;
             } else if (
               value.breed.toLowerCase().includes(searchTerm.toLowerCase())
             ) {
+              // console.log(value.breed);
               return value;
             }
           })
-          .map((dogs) => {
+          .map((data) => {
             return (
-              <div className={style.adoptContainer} key={dogs.id}>
-                <Dogs dogData={dogData}></Dogs>
+              <div className={style.adoptContainer} key={data.id}>
+                <Dogs dogData={data}></Dogs>
               </div>
             );
           })}
@@ -38,3 +40,5 @@ const Adopt = () => {
   );
 };
 export default Adopt;
+
+

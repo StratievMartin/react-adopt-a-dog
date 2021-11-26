@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "@firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD-leGrp68fvCF_HxkLrE1b0-nYFsVLjts",
-  authDomain: "adopt-a-dog-1716c.firebaseapp.com",
-  projectId: "adopt-a-dog-1716c",
-  storageBucket: "adopt-a-dog-1716c.appspot.com",
-  messagingSenderId: "999594392390",
-  appId: "1:999594392390:web:4a245ce4caffcff35d8347",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
