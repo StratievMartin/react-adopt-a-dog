@@ -1,4 +1,4 @@
-const url = "http://localhost:5000/dogBreeds";
+const url = "http://localhost:5000/dog_breeds";
 export const createDog = (breed, location, description, img) => {
   let dog = {
     breed,
@@ -32,5 +32,15 @@ export const updateDog = (id, breed, location, description, img) => {
 export const deleteDog = (id) => {
   return fetch(`${url}/${id}`, {
     method: "DELETE",
+  });
+};
+// adopted dogs
+export const adoptDog = (dog) => {
+  return fetch(`http://localhost:5000/adopted_dogs`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(dog),
   });
 };

@@ -4,7 +4,7 @@ import useService from "../../services/service";
 import { useState } from "react";
 
 const Adopt = () => {
-  const { data: dogData } = useService("http://localhost:5000/dogBreeds");
+  const { data: dogData } = useService("http://localhost:5000/dog_breeds");
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className={style.adopt}>

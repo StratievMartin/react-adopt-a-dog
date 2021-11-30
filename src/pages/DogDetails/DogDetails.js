@@ -5,7 +5,7 @@ import style from "./DogDetails.module.css";
 
 const DogDetails = () => {
   const { id } = useParams();
-  const { data: dogData } = useService(`http://localhost:5000/dogBreeds/${id}`);
+  const { data: dogData } = useService(`http://localhost:5000/dog_breeds/${id}`);
   return (
     <div>
       <div className={style.backButtonContainer}>

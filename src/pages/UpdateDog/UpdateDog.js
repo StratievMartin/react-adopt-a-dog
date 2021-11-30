@@ -16,7 +16,7 @@ const UpdateDog = () => {
   };
 
   const { data: dogData } = useService(
-    `http://localhost:5000/dogBreeds/${routeId}`
+    `http://localhost:5000/dog_breeds/${routeId}`
   );
   return (
     <div>
