@@ -21,7 +21,7 @@ const DogDetails = () => {
             <strong>Location</strong> {dogData && dogData.location}
           </p>
           <p>
-            <strong>description</strong>
+            <strong>Description</strong>
             {dogData && dogData.description}
           </p>
           <p>

@@ -27,7 +27,7 @@ const UpdateDog = () => {
           <div>
             <h2 className={style.authHeading}>Edit Dog</h2>
             <div className="field">
-              <label htmlFor="breed">Breed</label>
+              <label htmlFor="breed"></label>
               <input
                 type="text"
                 name="breed"
@@ -39,7 +39,7 @@ const UpdateDog = () => {
               ></input>
             </div>
             <div className="field">
-              <label htmlFor="location">Location</label>
+              <label htmlFor="location"></label>
               <input
                 type="text"
                 name="location"
@@ -51,19 +51,19 @@ const UpdateDog = () => {
               ></input>
             </div>
             <div className="field">
-              <label htmlFor="img">Img address</label>
+              <label htmlFor="img"></label>
               <input
                 type="text"
                 name="img"
                 id="img"
-                placeholder="img"
+                placeholder="Img address"
                 required
                 defaultValue={dogData.img}
                 onChange={(e) => setImg(e.target.value)}
               ></input>
             </div>
             <div className="field">
-              <label htmlFor="description">Description</label>
+              <label htmlFor="description"></label>
               <textarea
                 name="description"
                 id="description"

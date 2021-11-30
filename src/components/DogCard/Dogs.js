@@ -10,7 +10,6 @@ const Dogs = (singleDog) => {
     window.location.reload(false);
   };
   return (
-    <div>
       <ul className={style.dogs}>
         <div key={dog.id}>
           <li className={style.dogCard}>
@@ -39,32 +38,7 @@ const Dogs = (singleDog) => {
           </li>
         </div>
       </ul>
-    </div>
   );
 };
 export default Dogs;
 
-{
-  /* <ul className={style.dogs}>
-        {dogData &&
-          dogData.map((el) => {
-            return (
-              <div key={el.id}>
-                <li className={style.dogCard}>
-                  <DogAvatar props={el}></DogAvatar>
-                  <DogDesc props={el} />
-                  <button
-                    className={style.adoptBtn}
-                    onClick={() => handleAdopt(el.id)}
-                  >
-                    Adopt
-                  </button>
-                  <Link to={`/adopt/${el.id}`} className={style.readMore}>
-                    Read more
-                  </Link>
-                </li>
-              </div>
-            );
-          })}
-      </ul> */
-}

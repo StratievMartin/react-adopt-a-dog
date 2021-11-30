@@ -20,7 +20,7 @@ const CreatePet = () => {
       <div>
         <h2 className={style.authHeading}>Add Dog</h2>
         <div className="field">
-          <label htmlFor="breed">Breed</label>
+          <label htmlFor="breed"></label>
           <input
             type="text"
             name="breed"
@@ -31,7 +31,7 @@ const CreatePet = () => {
           ></input>
         </div>
         <div className="field">
-          <label htmlFor="location">Location</label>
+          <label htmlFor="location"></label>
           <input
             type="text"
             name="location"
@@ -42,18 +42,18 @@ const CreatePet = () => {
           ></input>
         </div>
         <div className="field">
-          <label htmlFor="img">Img address</label>
+          <label htmlFor="img"></label>
           <input
             type="text"
             name="img"
             id="img"
-            placeholder="img"
+            placeholder="Img address"
             required
             onChange={(e) => setImg(e.target.value)}
           ></input>
         </div>
         <div className="field">
-          <label htmlFor="description">Description</label>
+          <label htmlFor="description"></label>
           <textarea
             name="description"
             id="description"
@@ -61,7 +61,7 @@ const CreatePet = () => {
             rows="5"
             required
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="Dog"
+            placeholder="Dog description..."
           ></textarea>
         </div>
         <button

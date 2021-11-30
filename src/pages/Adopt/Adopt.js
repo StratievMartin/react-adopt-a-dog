@@ -9,34 +9,38 @@ const Adopt = () => {
   return (
     <div className={style.adopt}>
       <h2 className={style.header}>Available for adoption</h2>
-      <input
-        type="text"
-        placeholder="Search..."
-        onChange={(e) => {
-          setSearchTerm(e.target.value);
-        }}
-      />
-      {dogData &&
-        dogData
-          .filter((value) => {
-            if (searchTerm === "") {
-              return value;
-            } else if (
-              value.breed.toLowerCase().includes(searchTerm.toLowerCase())
-            ) {
-              return value;
-            }
-          })
-          .map((data) => {
-            return (
-              <div className={style.adoptContainer} key={data.id}>
-                <Dogs dogData={data}></Dogs>
-              </div>
-            );
-          })}
+      <div className={style.adoptContainer}>
+        <input
+          type="text"
+          placeholder="Search..."
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
+        />
+        <div className={style.flex}>
+          {dogData &&
+            dogData
+              .filter((value) => {
+                if (searchTerm === "") {
+                  return value;
+                } else if (
+                  value.breed.toLowerCase().includes(searchTerm.toLowerCase())
+                ) {
+                  return value;
+                }
+              })
+              .map((data) => {
+                return (
+                  <Dogs
+                    dogData={data}
+                    key={data.id}
+                    className={style.flex}
+                  ></Dogs>
+                );
+              })}
+        </div>
+      </div>
     </div>
   );
 };
 export default Adopt;
-
-

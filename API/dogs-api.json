@@ -139,20 +139,6 @@
       "description": "test",
       "img": "https://thepetsmarket.in/wp-content/uploads/2020/10/At-What-Age-Is-A-Cocker-Spaniel-Fully-Grown_.jpg",
       "id": 12
-    },
-    {
-      "breed": "ads",
-      "location": "Bg",
-      "description": "asd",
-      "img": "https://media.istockphoto.com/photos/english-cocker-spaniel-9-months-old-sitting-against-white-background-picture-id150420987",
-      "id": 13
-    },
-    {
-      "breed": "beag",
-      "location": "England",
-      "description": "asdasd",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/5/55/Beagle_600.jpg",
-      "id": 14
     }
   ]
 }

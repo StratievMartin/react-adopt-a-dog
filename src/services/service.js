@@ -5,11 +5,6 @@ const useService = (url) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
 
-  const handleAdopt = (id) => {
-    const newDogs = data.filter((el) => el.id !== id);
-    setData(newDogs);
-  };
-
   useEffect(() => {
     const abortCont = new AbortController();
     fetch(url, { signal: abortCont.signal })
@@ -38,7 +33,7 @@ const useService = (url) => {
   } else if (!isLoaded) {
     return <div style={{ textAlign: "center" }}>Loading...</div>;
   } else {
-    return { data, handleAdopt };
+    return { data };
   }
 };
 export default useService;
