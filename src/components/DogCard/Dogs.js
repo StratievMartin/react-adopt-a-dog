@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import style from "./Dogs.module.css";
 import DogAvatar from "./DogInfo/DogAvatar";
 import DogDesc from "./DogInfo/DogDesc";
+import { deleteDog } from "../../utils/functions";
 // import {handleAdopt} from useService ;
 
 const Dogs = (singleDog) => {
   const dog = singleDog.dogData;
+  const history = useHistory();
   return (
     <div>
       <ul className={style.dogs}>
@@ -22,6 +24,13 @@ const Dogs = (singleDog) => {
             <Link to={`/adopt/${dog.id}`} className={style.readMore}>
               Read more
             </Link>
+            <button
+              onClick={() => {
+                deleteDog(dog.id).then((res) => console.log(res));
+              }}
+            >
+              x
+            </button>
           </li>
         </div>
       </ul>

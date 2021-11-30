@@ -15,10 +15,13 @@ const Login = () => {
   // onAuthStateChanged(auth, (user) => {
   //   setUser(user);
   // });
+  const onLog = (e) =>{
+    e.preventDefault();
+  }
 
   const login = async (e) => {
     try {
-      e.preventDefault();
+      // e.preventDefault();
       const user = await signInWithEmailAndPassword(auth, email, password);
       console.log(user);
       history.push("/adopt");
@@ -28,7 +31,7 @@ const Login = () => {
   };
 
   return (
-    <form className={style.authForm}>
+    <form className={style.authForm} onSubmit={onLog}>
       <div>
         <h2 className={style.authHeading}>Login</h2>
         <div className="field">

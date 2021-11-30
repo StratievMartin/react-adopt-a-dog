@@ -16,10 +16,11 @@ const Register = () => {
   // onAuthStateChanged(auth, (currentUser) => {
   //   setUser(currentUser);
   // });
-
+  const onReg = (e) =>{
+    e.preventDefault();
+  }
   const register = async (e) => {
     try {
-      e.preventDefault();
       const user = await createUserWithEmailAndPassword(auth, email, password);
       console.log(user);
       history.push('/adopt');
@@ -28,7 +29,7 @@ const Register = () => {
     }
   }
   return (
-    <form className={style.authForm}>
+    <form className={style.authForm} onSubmit={onReg}>
       <div>
         <h2 className={style.authHeading}>Register</h2>
         <div className="field">

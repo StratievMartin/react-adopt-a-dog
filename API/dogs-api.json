@@ -1,6 +1,6 @@
 {
   "dogBreeds": [
-    { 
+    {
       "id": 1,
       "breed": "Labrador Retriever",
       "location": "Canada,USA",
@@ -132,6 +132,14 @@
         "Loyal"
       ],
       "img": "https://media.istockphoto.com/photos/purebred-boxer-dog-listening-with-a-head-tilt-picture-id1257560195?k=20&m=1257560195&s=612x612&w=0&h=wla8T8QFjvIcS_5jRrE_L_dss7ScQwVw1_7ueE2JQoo="
+    },
+    {
+      "name": "adasdsad",
+      "breed": "sdsdswere",
+      "location": "rerwer",
+      "temperament": "werwerwe",
+      "img": "https://fluffyhund.com/wp-content/uploads/beagle-thumb.jpg",
+      "id": 13
     }
   ]
 }

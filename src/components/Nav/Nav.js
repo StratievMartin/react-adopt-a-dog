@@ -1,8 +1,5 @@
 import style from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
-// import Home from '../Home/Home';
-// import Profile from '../Profile/Profile';
-// import Adopt from '../Adopt/Adopt';
 import { auth } from "../../utils/firebase";
 import { signOut } from "firebase/auth";
 import { useHistory } from "react-router-dom";
@@ -31,6 +28,12 @@ const Nav = (user) => {
             </NavLink>
           </li>
           <li>
+            {/* if admin */}
+            <NavLink to="/create" className={style.navLinks}>
+              Add pet
+            </NavLink>
+          </li>
+          <li>
             <ul>
               {user.props ? (
                 <li>
@@ -49,13 +52,6 @@ const Nav = (user) => {
                 </li>
               )}
             </ul>
-
-            {/* <NavLink className={style.navLinks} to="/login">
-                    Login
-                  </NavLink>
-                  <NavLink className={style.navLinks} to="/register">
-                    Register
-                  </NavLink> */}
           </li>
         </ul>
       </div>
