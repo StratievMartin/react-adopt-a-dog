@@ -33,6 +33,10 @@ const Nav = (user) => {
               Add pet
             </NavLink>
           </li>
+        </ul>
+      </div>
+      <div className={style.navItems}>
+        <ul>
           <li>
             <ul>
               {user.props ? (

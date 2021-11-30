@@ -10,4 +10,7 @@
 .adoptContainer {
   text-align: center;
   align-items: center;
+}.flex{
+  display: flex;
+  flex-wrap: wrap;
 }
