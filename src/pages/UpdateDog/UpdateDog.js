@@ -26,6 +26,7 @@ const UpdateDog = () => {
         <form className={style.authForm} onSubmit={onCreate}>
           <div>
             <h2 className={style.authHeading}>Edit Dog</h2>
+            <img width='300' src={dogData.img} alt="" />
             <div className="field">
               <label htmlFor="breed"></label>
               <input

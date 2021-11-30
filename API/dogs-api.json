@@ -140,5 +140,19 @@
       "img": "https://thepetsmarket.in/wp-content/uploads/2020/10/At-What-Age-Is-A-Cocker-Spaniel-Fully-Grown_.jpg",
       "id": 12
     }
+  ],
+  "AdoptedDogs": [
+    {
+      "id": 1,
+      "breed": "Labrador Retriever",
+      "location": "Canada,USA",
+      "description": [
+        "Cheerful",
+        "Gentle",
+        "Friendly",
+        "Intelligent"
+      ],
+      "img": "https://st2.depositphotos.com/3606215/8502/i/950/depositphotos_85025700-stock-photo-happy-cute-dog-puppy-labrador.jpg"
+    }
   ]
 }

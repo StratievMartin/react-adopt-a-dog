@@ -10,13 +10,15 @@ const Adopt = () => {
     <div className={style.adopt}>
       <h2 className={style.header}>Available for adoption</h2>
       <div className={style.adoptContainer}>
-        <input
-          type="text"
-          placeholder="Search..."
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-          }}
-        />
+        <div className={style.search}>
+          <input
+            type="text"
+            placeholder="Search..."
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+            }}
+          />
+        </div>
         <div className={style.flex}>
           {dogData &&
             dogData

@@ -11,6 +11,7 @@
   border-radius: 15px;
   margin: 20px;
   text-align: center;
+  position: relative;
   /* align-content: center; */
   box-shadow: 2px 3px 8px 5px rgba(0, 0, 0, 0.58);
 }
@@ -18,12 +19,12 @@
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
-.readMore{
+.readMore {
   margin-left: 30px;
   text-decoration: none;
   color: black;
 }
-.readMore:hover{
+.readMore:hover {
   color: grey;
 }
 .adoptBtn {
@@ -37,4 +38,34 @@
 .adoptBtn:hover {
   cursor: pointer;
   border: 2px solid white;
+}
+.update {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid black;
+  background-color: inherit;
+  border-radius: inherit;
+  padding: 5px 10px;
+}
+.update:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px solid black;
+  background-color: inherit;
+  border-radius: inherit;
+  padding: 10px 15px;
+  /* margin: 10px; */
+}
+.deleteButton:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }

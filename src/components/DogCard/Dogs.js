@@ -9,36 +9,36 @@ const Dogs = (singleDog) => {
   const refreshPage = () => {
     window.location.reload(false);
   };
+  const adoptDog = (id) =>{
+    
+  }
   return (
-      <ul className={style.dogs}>
-        <div key={dog.id}>
-          <li className={style.dogCard}>
-            <DogAvatar props={dog}></DogAvatar>
-            <DogDesc props={dog} />
-            <button
-              className={style.adoptBtn}
-              // onClick={() => handleAdopt(dog.id)}
-            >
-              Adopt
-            </button>
-            <Link to={`/adopt/${dog.id}`} className={style.readMore}>
-              Read more
-            </Link>
-            <div>
-              <Link to={`/update/${dog.id}`}>Edit</Link>
-              <button
-                className={style.readMore}
-                onClick={() => {
-                  deleteDog(dog.id).then(() => refreshPage());
-                }}
-              >
-                x
-              </button>
-            </div>
-          </li>
-        </div>
-      </ul>
+    <ul className={style.dogs}>
+      <div key={dog.id}>
+        <li className={style.dogCard}>
+          <Link to={`/update/${dog.id}`} className={style.update}>Edit</Link>
+          <button
+            className={style.deleteButton}
+            onClick={() => {
+              deleteDog(dog.id).then(() => refreshPage());
+            }}
+          >
+            x
+          </button>
+          <DogAvatar props={dog}></DogAvatar>
+          <DogDesc props={dog} />
+          <button
+            className={style.adoptBtn}
+            // onClick={() => handleAdopt(dog.id)}
+          >
+            Adopt
+          </button>
+          <Link to={`/adopt/${dog.id}`} className={style.readMore}>
+            Read more
+          </Link>
+        </li>
+      </div>
+    </ul>
   );
 };
 export default Dogs;
-

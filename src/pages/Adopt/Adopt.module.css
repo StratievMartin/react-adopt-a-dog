@@ -9,6 +9,10 @@
 .adoptContainer {
   align-items: center;
 }
+.search{
+  display: flex;
+  justify-content: center;
+}
 .flex{
   display: flex;
   flex-wrap: wrap;
