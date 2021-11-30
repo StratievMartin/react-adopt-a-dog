@@ -7,7 +7,8 @@ import Adopt from "./pages/Adopt/Adopt";
 import DogDetails from "./pages/DogDetails/DogDetails";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
-import CreatePet from "./pages/CreatePet/CreatePet";
+import CreateDog from "./pages/CreateDog/CreateDog";
+import UpdateDog from "./pages/UpdateDog/UpdateDog";
 import { useState } from "react";
 import { auth } from "./utils/firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -35,7 +36,8 @@ function App() {
         <Route path="/adopt/:id" component={DogDetails}></Route>
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path="/create" component={CreatePet} />
+        <Route path="/create" component={CreateDog} />
+        <Route path="/update/:id" component={UpdateDog} />
         <Route path="*" component={() => "404 NOT FOUND"}></Route>
         <Home />
         {/* <Profile /> */}

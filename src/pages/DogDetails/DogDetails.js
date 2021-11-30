@@ -21,8 +21,8 @@ const DogDetails = () => {
             <strong>Location</strong> {dogData && dogData.location}
           </p>
           <p>
-            <strong>Temperament</strong>
-            {dogData && dogData.temperament}
+            <strong>description</strong>
+            {dogData && dogData.description}
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione

@@ -1,10 +1,9 @@
 const url = "http://localhost:5000/dogBreeds";
-export const createDog = (dogName, breed, location, info, img) => {
+export const createDog = (breed, location, description, img) => {
   let dog = {
-    name: dogName,
     breed,
     location,
-    temperament: info,
+    description,
     img,
   };
   return fetch(url, {
@@ -15,16 +14,15 @@ export const createDog = (dogName, breed, location, info, img) => {
     body: JSON.stringify(dog),
   });
 };
-export const updateDog = (dogName, breed, location, info, img) => {
+export const updateDog = (id, breed, location, description, img) => {
   let dog = {
-    name: dogName,
     breed,
     location,
-    temperament: info,
+    description,
     img,
   };
-  return fetch(url, {
-    method: "PATCH",
+  return fetch(`${url}/${id}`, {
+    method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
@@ -32,7 +30,7 @@ export const updateDog = (dogName, breed, location, info, img) => {
   });
 };
 export const deleteDog = (id) => {
-  return fetch(`${url}/${id}`,{
-      method: "DELETE",
-    })
+  return fetch(`${url}/${id}`, {
+    method: "DELETE",
+  });
 };

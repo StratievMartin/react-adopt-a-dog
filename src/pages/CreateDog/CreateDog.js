@@ -3,9 +3,8 @@ import { createDog } from "../../utils/functions";
 import { useHistory } from "react-router";
 import style from "../Auth/Form.module.css";
 const CreatePet = () => {
-  const [dogName, setdogName] = useState([]);
   const [breed, setBreed] = useState([]);
-  const [info, setInfo] = useState([]);
+  const [description, setDescription] = useState([]);
   const [location, setLocation] = useState([]);
   const [img, setImg] = useState([]);
   const history = useHistory();
@@ -13,21 +12,13 @@ const CreatePet = () => {
   const onCreate = (e) => {
     e.preventDefault();
   };
+  const checkForm =() =>{
+    
+  }
   return (
     <form className={style.authForm} onSubmit={onCreate}>
       <div>
         <h2 className={style.authHeading}>Add Dog</h2>
-        <div className="field">
-          <label htmlFor="dogName">Name</label>
-          <input
-            type="text"
-            name="dogName"
-            id="dogName"
-            placeholder="Name"
-            value={dogName}
-            onChange={(e) => setdogName(e.target.value)}
-          ></input>
-        </div>
         <div className="field">
           <label htmlFor="breed">Breed</label>
           <input
@@ -35,18 +26,18 @@ const CreatePet = () => {
             name="breed"
             id="breed"
             placeholder="Breed"
-            value={breed}
+            required
             onChange={(e) => setBreed(e.target.value)}
           ></input>
         </div>
         <div className="field">
-          <label htmlFor="breed">Location</label>
+          <label htmlFor="location">Location</label>
           <input
             type="text"
             name="location"
             id="location"
             placeholder="Location"
-            value={location}
+            required
             onChange={(e) => setLocation(e.target.value)}
           ></input>
         </div>
@@ -57,26 +48,25 @@ const CreatePet = () => {
             name="img"
             id="img"
             placeholder="img"
-            value={img}
+            required
             onChange={(e) => setImg(e.target.value)}
           ></input>
         </div>
         <div className="field">
-          <label htmlFor="info">Info</label>
+          <label htmlFor="description">Description</label>
           <textarea
-            name="info"
-            id="info"
+            name="description"
+            id="description"
             cols="30"
-            rows="10"
-            value={info}
-            onChange={(e) => setInfo(e.target.value)}
-            placeholder="More information about the dog"
+            rows="5"
+            required
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Dog"
           ></textarea>
         </div>
         <button
           onClick={() => {
-            createDog(dogName, breed, location, info, img)
-            .then(() => {
+            createDog(breed, location, description, img).then(() => {
               history.push("/adopt");
             });
           }}

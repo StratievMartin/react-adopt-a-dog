@@ -4,7 +4,7 @@
       "id": 1,
       "breed": "Labrador Retriever",
       "location": "Canada,USA",
-      "temperament": [
+      "description": [
         "Cheerful",
         "Gentle",
         "Friendly",
@@ -16,7 +16,7 @@
       "id": 2,
       "breed": "German Shepard",
       "location": "Germany",
-      "temperament": [
+      "description": [
         "Corageous",
         "Intelligent",
         "Loyal",
@@ -28,7 +28,7 @@
       "id": 3,
       "breed": "Golden Retriever",
       "location": "United Kingdom",
-      "temperament": [
+      "description": [
         "Intelligent",
         "Kind",
         "Friendly",
@@ -40,7 +40,7 @@
       "id": 4,
       "breed": "French Bulldog",
       "location": "France, UK",
-      "temperament": [
+      "description": [
         "Playful",
         "Sociable",
         "Friendly",
@@ -53,7 +53,7 @@
       "id": 5,
       "breed": "Bulldog",
       "location": "United Kingdom",
-      "temperament": [
+      "description": [
         "Friendly",
         "Docile",
         "Willful",
@@ -65,7 +65,7 @@
       "id": 6,
       "breed": "Beagle",
       "location": "United Kingdom",
-      "temperament": [
+      "description": [
         "Gentle",
         "Intelligent",
         "Even Tempered",
@@ -77,7 +77,7 @@
       "id": 7,
       "breed": "Poodle",
       "location": "Germany, France",
-      "temperament": [
+      "description": [
         "Intelligent",
         "Faithful",
         "Trainable",
@@ -89,7 +89,7 @@
       "id": 8,
       "breed": "Rottweiler",
       "location": "Germany",
-      "temperament": [
+      "description": [
         "Intelligent",
         "Corageous",
         "Fearless",
@@ -101,7 +101,7 @@
       "id": 9,
       "breed": "German Shorthaired Pointer",
       "location": "Germany",
-      "temperament": [
+      "description": [
         "Intelligent",
         "Trainable",
         "Boisterous",
@@ -113,7 +113,7 @@
       "id": 10,
       "breed": "Yorkshire Terrier",
       "location": "United Kingdom",
-      "temperament": [
+      "description": [
         "Independent",
         "Intelligent",
         "Corageous",
@@ -125,7 +125,7 @@
       "id": 11,
       "breed": "Boxer",
       "location": "Germany",
-      "temperament": [
+      "description": [
         "Playful",
         "Friendly",
         "Devoted",
@@ -134,12 +134,25 @@
       "img": "https://media.istockphoto.com/photos/purebred-boxer-dog-listening-with-a-head-tilt-picture-id1257560195?k=20&m=1257560195&s=612x612&w=0&h=wla8T8QFjvIcS_5jRrE_L_dss7ScQwVw1_7ueE2JQoo="
     },
     {
-      "name": "adasdsad",
-      "breed": "sdsdswere",
-      "location": "rerwer",
-      "temperament": "werwerwe",
-      "img": "https://fluffyhund.com/wp-content/uploads/beagle-thumb.jpg",
+      "breed": "Cocker",
+      "location": "England",
+      "description": "test",
+      "img": "https://thepetsmarket.in/wp-content/uploads/2020/10/At-What-Age-Is-A-Cocker-Spaniel-Fully-Grown_.jpg",
+      "id": 12
+    },
+    {
+      "breed": "ads",
+      "location": "Bg",
+      "description": "asd",
+      "img": "https://media.istockphoto.com/photos/english-cocker-spaniel-9-months-old-sitting-against-white-background-picture-id150420987",
       "id": 13
+    },
+    {
+      "breed": "beag",
+      "location": "England",
+      "description": "asdasd",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/5/55/Beagle_600.jpg",
+      "id": 14
     }
   ]
 }

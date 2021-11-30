@@ -20,12 +20,10 @@ const Adopt = () => {
         dogData
           .filter((value) => {
             if (searchTerm === "") {
-              console.log('log'+value);
               return value;
             } else if (
               value.breed.toLowerCase().includes(searchTerm.toLowerCase())
             ) {
-              // console.log(value.breed);
               return value;
             }
           })

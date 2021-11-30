@@ -1,13 +1,14 @@
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import style from "./Dogs.module.css";
 import DogAvatar from "./DogInfo/DogAvatar";
 import DogDesc from "./DogInfo/DogDesc";
 import { deleteDog } from "../../utils/functions";
-// import {handleAdopt} from useService ;
 
 const Dogs = (singleDog) => {
   const dog = singleDog.dogData;
-  const history = useHistory();
+  const refreshPage = () => {
+    window.location.reload(false);
+  };
   return (
     <div>
       <ul className={style.dogs}>
@@ -24,13 +25,17 @@ const Dogs = (singleDog) => {
             <Link to={`/adopt/${dog.id}`} className={style.readMore}>
               Read more
             </Link>
-            <button
-              onClick={() => {
-                deleteDog(dog.id).then((res) => console.log(res));
-              }}
-            >
-              x
-            </button>
+            <div>
+              <Link to={`/update/${dog.id}`}>Edit</Link>
+              <button
+                className={style.readMore}
+                onClick={() => {
+                  deleteDog(dog.id).then(() => refreshPage());
+                }}
+              >
+                x
+              </button>
+            </div>
           </li>
         </div>
       </ul>
