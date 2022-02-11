@@ -1,18 +1,6 @@
 {
   "dog_breeds": [
     {
-      "id": 1,
-      "breed": "Labrador Retriever",
-      "location": "Canada,USA",
-      "description": [
-        "Cheerful",
-        "Gentle",
-        "Friendly",
-        "Intelligent"
-      ],
-      "img": "https://st2.depositphotos.com/3606215/8502/i/950/depositphotos_85025700-stock-photo-happy-cute-dog-puppy-labrador.jpg"
-    },
-    {
       "id": 6,
       "breed": "Beagle",
       "location": "United Kingdom",
@@ -71,6 +59,13 @@
         "Loyal"
       ],
       "img": "https://media.istockphoto.com/photos/purebred-boxer-dog-listening-with-a-head-tilt-picture-id1257560195?k=20&m=1257560195&s=612x612&w=0&h=wla8T8QFjvIcS_5jRrE_L_dss7ScQwVw1_7ueE2JQoo="
+    },
+    {
+      "breed": "Cocker",
+      "location": "England",
+      "description": "test",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/5/55/Beagle_600.jpg",
+      "id": 12
     }
   ],
   "adopted_dogs": [
